@@ -1,6 +1,8 @@
 const siteData = require("./modules/data-service");
 
 const express = require('express');
+require('pg');
+const Sequelize = require('sequelize');
 const app = express();
 app.use(express.static(__dirname + '/public'))
 
@@ -73,6 +75,10 @@ app.get("/sites/province-or-territory-demo", async (req,res)=>{
 });
 
 app.use((req, res) => res.status(404).sendFile(__dirname + "/views/404.html"));
+
+app.set('views', __dirname + '/views');
+
+app.use(express.static(__dirname + '/public'));
 
 siteData.initialize().then(()=>{
   app.listen(HTTP_PORT, () => { console.log(`server listening on: ${HTTP_PORT}`) });
