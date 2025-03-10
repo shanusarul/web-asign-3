@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Include the navbar partial -->
+    <%- include('partials/navbar', {page: '/about'}) %>
+
+    <!-- About Section -->
+    <section class="container mx-auto text-center py-12">
+        <h1 class="text-4xl font-bold">About Me</h1>
+        <p class="text-lg text-gray-600 mt-4">This page is about me and my interests.</p>
+    </section>
+
+    <!-- Profile Section -->
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 py-8">
+        <div>
+            <img src="https://th.bing.com/th/id/OIP.HGIFK8nJ7bhvNw9Ir7rBRwHaEc?rs=1&pid=ImgDetMain" alt="Profile Picture" class="w-full object-contain">
+        </div>
+        <div class="text-center md:text-left p-4">
+            <h2 class="text-2xl font-bold">shanus Arulanantham</h2>
+            <p class="text-gray-600 mt-2">
+                Hi, I'm Shanus Arulanantham, a passionate developer and student exploring the world of web development, software engineering, and data modeling. I specialize in web developing and full-stack web applications, with hands-on experience in building APIs, handling databases, and deploying apps on platforms like Vercel.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
