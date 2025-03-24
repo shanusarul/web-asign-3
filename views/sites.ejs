@@ -15,7 +15,7 @@
     <div class="hero bg-base-200 rounded-lg p-8 mb-8">
         <div class="hero-content text-center">
             <div class="max-w-md">
-                <h1 class="text-5xl font-bold">Site Collection</h1>
+                <h1 class="text-5xl font-bold">Site Collection <span class="text-base text-primary">(<%= sites.length %>)</span></h1>
                 <p class="py-6">Filter by region:
                     <a href="/sites?region=Atlantic%20Region" class="btn btn-sm btn-primary m-1">Atlantic Region</a>
                     <a href="/sites?region=Central%20Canada" class="btn btn-sm btn-primary m-1">Central Canada</a>
@@ -66,13 +66,13 @@
                             </td>
                             <td>
                                 <%= site.location %>, 
-                                <a href="/sites?provinceOrTerritory=<%= site.provinceOrTerritoryObj.name %>" class="btn btn-xs btn-info">
-                                    <%= site.provinceOrTerritoryObj.name %>
+                                <a href="/sites?provinceOrTerritory=<%= site.ProvinceOrTerritory.name %>" class="btn btn-xs btn-info">
+                                    <%= site.ProvinceOrTerritory.name %>
                                 </a>
                             </td>
                             <td>
-                                <a href="/sites?region=<%= site.provinceOrTerritoryObj.region %>" class="btn btn-xs btn-info">
-                                    <%= site.provinceOrTerritoryObj.region %>
+                                <a href="/sites?region=<%= site.ProvinceOrTerritory.region %>" class="btn btn-xs btn-info">
+                                    <%= site.ProvinceOrTerritory.region %>
                                 </a>
                             </td>
                             <td>

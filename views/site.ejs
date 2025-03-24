@@ -32,8 +32,8 @@
                     <div class="card-body">
                         <p><strong>Site Name: </strong><%= site.site %></p>
                         <p><strong>Date: </strong><%= site.date %> (<%= site.dateType %>)</p>
-                        <p><strong>Location: </strong><%= site.location %>, <%= site.provinceOrTerritoryObj.name %></p>
-                        <p><strong>Region: </strong><%= site.provinceOrTerritoryObj.region %></p>
+                        <p><strong>Location: </strong><%= site.location %>, <%= site.ProvinceOrTerritory.name %></p>
+                        <p><strong>Region: </strong><%= site.ProvinceOrTerritory.region %></p>
                         <p><strong>Geolocation: </strong><%= site.latitude %>, <%= site.longitude %></p>
                         <p><strong>Designated: </strong><%= site.designated %></p>
                         
@@ -44,6 +44,7 @@
                         
                         <div class="card-actions justify-end mt-4">
                             <a href="#" onclick="history.back(); return false;" class="btn btn-primary">Back</a>
+                            <a href="/editSite/<%= site.siteId %>" class="btn btn-secondary">Edit Site</a>
                         </div>
                     </div>
                 </div>
